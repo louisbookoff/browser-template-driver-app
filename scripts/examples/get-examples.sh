@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://salty-everglades-61557.herokuapp.com/trips/${ID}" \
+curl "http://localhost:4741/examples" \
   --include \
   --request GET \
   --header "Authorization: Token token=${TOKEN}"
