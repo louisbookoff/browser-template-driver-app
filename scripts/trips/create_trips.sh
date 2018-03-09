@@ -8,7 +8,7 @@ curl "https://salty-everglades-61557.herokuapp.com/trips" \
   --data '{
     "trip": {
       "user_id": "'"${USER_ID}"'",
-      "pickup_location": "'"${PICKUP}"'",
+      "pick_up_location": "'"${PICKUP}"'",
       "drop_off_location": "'"${DROPOFF}"'",
       "passengers": "'"${PASSENGERS}"'",
       "trip_date": "'"${TRIP_DATE}"'"

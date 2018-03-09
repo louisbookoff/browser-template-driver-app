@@ -94,7 +94,7 @@ const getTripsSuccess = function (data) {
 
 const getTripsFailure = function (data) {
   $('#message').text('Check your internet connection could not retrieve trips')
-  $('.card-text').css('color', 'red')
+  $('#message').css('color', 'red')
 }
 
 module.exports = {
