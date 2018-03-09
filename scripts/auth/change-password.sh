@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://salty-everglades-61557.herokuapp.com/change-password/${ID}" \
+curl "https://salty-everglades-61557.herokuapp.com/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \
