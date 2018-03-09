@@ -42,11 +42,19 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onCreateTrips = function () {
+  event.preventDefault()
+  api.createTrips()
+    .then(ui.createTripSuccess)
+    .catch(ui.createTripFailure)
+}
+
 const addHandlers = () => {
   $('.signup-form').on('submit', onSignUp)
   $('.signin-form').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  $('.create-trip').on('click', onCreateTrips) // TODO
 }
 
 module.exports = {

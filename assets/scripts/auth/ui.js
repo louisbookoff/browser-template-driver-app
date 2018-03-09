@@ -74,6 +74,18 @@ const signOutFailure = function (error) {
   console.error(error)
 }
 
+const createTripSuccess = function (data) {
+  $('#message').text('You have sucessfully created a new game!')
+  $('#message').css('background-color', 'green')
+  // console.log(events)
+  store.trip = data.trip // TODO:come back to this
+}
+
+const createTripFailure = function () {
+  $('#message').text('Error on create game')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -82,5 +94,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createTripSuccess,
+  createTripFailure
 }

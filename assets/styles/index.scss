@@ -1,2 +1,24 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+/*******************************
+        NAVBAR
+*******************************/
+#topnav {
+  z-index: 1030;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+  border: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  min-height: 62px;
+}
+
+#topnav .logo {
+  float: left;
+  line-height: 70px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+}

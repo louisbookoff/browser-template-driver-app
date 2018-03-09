@@ -47,9 +47,21 @@ const signOut = function (data) {
   })
 }
 
+const createTrips = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/trips',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createTrips
 }
