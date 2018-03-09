@@ -63,10 +63,8 @@ const changePasswordFailure = function (error) {
 const signOutSuccess = function () {
   $('#message').text('You have signed out succesfully')
   $('#message').css('background-color', 'green')
-  $('#game-page').toggleClass('hidden')
-  $('table').addClass('hidden')
+  $('#dashboard').toggleClass('hidden')
   $('#pageone').removeClass('hidden')
-  $('.card-text').text('Click get stats so you can see how much of a BOSS you are!')
   // console.log('Signed out successfully')
 }
 
