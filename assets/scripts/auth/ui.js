@@ -82,8 +82,19 @@ const createTripSuccess = function (data) {
 }
 
 const createTripFailure = function () {
-  $('#message').text('Error on create game')
+  $('#message').text('Error while creating a trip')
   $('#message').css('background-color', 'red')
+}
+
+const getTripsSuccess = function (data) {
+  console.log(data)
+  $('table').text(data.trips)
+  $('table').css('color', 'blue')
+}
+
+const getTripsFailure = function (data) {
+  $('#message').text('Check your internet connection could not retrieve trips')
+  $('.card-text').css('color', 'red')
 }
 
 module.exports = {
@@ -96,5 +107,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   createTripSuccess,
-  createTripFailure
+  createTripFailure,
+  getTripsSuccess,
+  getTripsFailure
 }

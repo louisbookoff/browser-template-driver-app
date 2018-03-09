@@ -42,11 +42,22 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-const onCreateTrips = function () {
+const onCreateTrips = function (event) {
   event.preventDefault()
-  api.createTrips()
+  // pass event.target to getFormFields to create a data object
+  const data = getFormFields(event.target)
+
+  // pass data to createTrips function
+  api.createTrips(data)
     .then(ui.createTripSuccess)
     .catch(ui.createTripFailure)
+}
+
+const onGetTrips = function () {
+  event.preventDefault()
+  api.getTrips()
+    .then(ui.getTripsSuccess)
+    .catch(ui.getTripsFailure)
 }
 
 const addHandlers = () => {
@@ -54,7 +65,8 @@ const addHandlers = () => {
   $('.signin-form').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
-  $('.create-trip').on('click', onCreateTrips) // TODO
+  $('#create-trip').on('submit', onCreateTrips) // TODO
+  $('.trips').on('click', onGetTrips)
 }
 
 module.exports = {
