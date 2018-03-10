@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store')
+const showListTemplate = require('../templates/list.handlebars')
 
 const signUpSuccess = function (data) {
   // if ($(.form-group).val() === $(.confirmation).val())
@@ -88,7 +89,9 @@ const createTripFailure = function () {
 
 const getTripsSuccess = function (data) {
   console.log(data)
-  $('table').text(data.trips)
+  // const showTableHTML = showListTemplate({ trips: data.trips })
+  // $('.trips').attr(showTableHTML)
+  $('.table').text(JSON.stringify(data.trips, null, 2))
   $('table').css('color', 'blue')
 }
 

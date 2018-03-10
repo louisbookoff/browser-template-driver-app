@@ -53,9 +53,9 @@ const onCreateTrips = function (event) {
     .catch(ui.createTripFailure)
 }
 
-const onGetTrips = function () {
+const onGetTrips = function (event) {
   event.preventDefault()
-  api.getTrips()
+  api.getTrips(event)
     .then(ui.getTripsSuccess)
     .catch(ui.getTripsFailure)
 }
@@ -71,6 +71,13 @@ const onUpdateTrip = function (event) {
   console.log('data is ', data)
 }
 
+const onDeleteTrip = function (event) {
+  event.preventDefault()
+  api.deleteTrip()
+    .then(ui.deleteTripSuccess)
+    .catch(ui.deleteTripFailure)
+}
+
 const addHandlers = () => {
   $('.signup-form').on('submit', onSignUp)
   $('.signin-form').on('submit', onSignIn)
@@ -79,6 +86,7 @@ const addHandlers = () => {
   $('#create-trip').on('submit', onCreateTrips)
   $('#update-trip').on('submit', onUpdateTrip)
   $('.trips').on('click', onGetTrips)
+  $('#remove-trip').on('submit', onDeleteTrip)
 }
 
 module.exports = {

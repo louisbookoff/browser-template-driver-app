@@ -73,7 +73,7 @@ Sign In!
 <!-- data target must be the same as id below -->
 </button>
 
-  <!-- Modal -->
+  <!-- Modal sign-in -->
   <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -165,8 +165,26 @@ Sign In!
 <br>
 <br>
 
+<legend>Remove</legend>
+    <form id="remove-trip" class="border">
+      <fieldset>
+        <!-- <input type="text" name="trip[user_id]" placeholder="User ID"> -->
+        <input type="text" name="trip[id]" placeholder="Trip ID">
+        <input type="submit" value="Remove Trip">
+      </fieldset>
+    </form>
+
+<br>
+<br>
+<br>
+
 
 <button type="button" class="btn btn-primary btn-lg trips">See Trips!</button>
+
+
+<div id=json>
+</div>
+
 
 <div class="modal-body">
             <!-- <p>One fine body&hellip;</p> -->

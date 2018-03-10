@@ -61,7 +61,7 @@ const createTrips = function (data) {
 
 const getTrips = function () {
   return $.ajax({
-    url: config.apiOrigin + '/trips',
+    url: config.apiOrigin + '/trips/',
     method: 'GET',
     headers: {
       contentType: 'application/json',
@@ -82,6 +82,16 @@ const updateTrip = function (data) {
   })
 }
 
+const deleteTrip = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/trips/' + store.trip.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.id
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -89,5 +99,6 @@ module.exports = {
   signOut,
   createTrips,
   getTrips,
-  updateTrip
+  updateTrip,
+  deleteTrip
 }
