@@ -1,6 +1,5 @@
 'use strict'
 const store = require('../store')
-const showListTemplate = require('../templates/list.handlebars')
 
 const signUpSuccess = function (data) {
   // if ($(.form-group).val() === $(.confirmation).val())
