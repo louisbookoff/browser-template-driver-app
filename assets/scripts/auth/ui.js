@@ -97,6 +97,18 @@ const getTripsFailure = function (data) {
   $('#message').css('color', 'red')
 }
 
+const updateTripSuccess = function (data) {
+  $('#message').text('You have sucessfully updated that trip!')
+  $('#message').css('background-color', 'green')
+  // console.log(events)
+  store.trip = data.trip // TODO:come back to this
+}
+
+const updateTripFailure = function () {
+  $('#message').text('Error while updating trip')
+  $('#message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -109,5 +121,7 @@ module.exports = {
   createTripSuccess,
   createTripFailure,
   getTripsSuccess,
-  getTripsFailure
+  getTripsFailure,
+  updateTripSuccess,
+  updateTripFailure
 }

@@ -60,12 +60,24 @@ const onGetTrips = function () {
     .catch(ui.getTripsFailure)
 }
 
+const onUpdateTrip = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+
+  // send data to api method
+  api.updateTrip(data)
+    .then(ui.updateTripSuccess)
+    .catch(ui.updateTripFailure)
+  console.log('data is ', data)
+}
+
 const addHandlers = () => {
   $('.signup-form').on('submit', onSignUp)
   $('.signin-form').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
-  $('#create-trip').on('submit', onCreateTrips) // TODO
+  $('#create-trip').on('submit', onCreateTrips)
+  $('#update-trip').on('submit', onUpdateTrip)
   $('.trips').on('click', onGetTrips)
 }
 
