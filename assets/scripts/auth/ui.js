@@ -112,6 +112,16 @@ const updateTripFailure = function () {
   $('#message').css('background-color', 'red')
 }
 
+const deleteTripSuccess = function (data) {
+  $('#message').text('You have succesfully a delete trip')
+  $('message').css('background-color', 'green')
+}
+
+const deleteTripFailure = function () {
+  $('#message').text('Deleting trip failed')
+  $('message').css('background-color', 'red')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -126,5 +136,7 @@ module.exports = {
   getTripsSuccess,
   getTripsFailure,
   updateTripSuccess,
-  updateTripFailure
+  updateTripFailure,
+  deleteTripSuccess,
+  deleteTripFailure
 }

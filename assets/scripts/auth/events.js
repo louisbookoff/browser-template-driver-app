@@ -73,9 +73,11 @@ const onUpdateTrip = function (event) {
 
 const onDeleteTrip = function (event) {
   event.preventDefault()
-  api.deleteTrip()
+  const data = getFormFields(this)
+  api.deleteTrip(data)
     .then(ui.deleteTripSuccess)
     .catch(ui.deleteTripFailure)
+  console.log('data is ', data)
 }
 
 const addHandlers = () => {

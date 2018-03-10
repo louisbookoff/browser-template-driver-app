@@ -82,13 +82,14 @@ const updateTrip = function (data) {
   })
 }
 
-const deleteTrip = function () {
+const deleteTrip = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/trips/' + store.trip.id,
+    url: config.apiOrigin + '/trips/' + data.trip.id,
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token=' + store.user.id
-    }
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
   })
 }
 
