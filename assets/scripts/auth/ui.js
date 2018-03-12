@@ -78,12 +78,14 @@ const createTripSuccess = function (data) {
   $('#message').text('You have sucessfully created a new game!')
   $('#message').css('background-color', 'green')
   // console.log(events)
+  $('.update').val('')
   store.trip = data.trip // TODO:come back to this
 }
 
 const createTripFailure = function () {
   $('#message').text('Error while creating a trip')
   $('#message').css('background-color', 'red')
+  $('.update').val('')
 }
 
 const getTripsSuccess = function (data) {
@@ -102,6 +104,7 @@ const getTripsFailure = function (data) {
 const updateTripSuccess = function (data) {
   $('#message').text('You have sucessfully updated that trip!')
   $('#message').css('background-color', 'green')
+  $('.update').val('')
   // console.log(events)
   store.trip = data.trip // TODO:come back to this
 }
@@ -109,6 +112,7 @@ const updateTripSuccess = function (data) {
 const updateTripFailure = function () {
   $('#message').text('Error while updating trip')
   $('#message').css('background-color', 'red')
+  $('.update').val('')
 }
 
 const deleteTripSuccess = function (data) {

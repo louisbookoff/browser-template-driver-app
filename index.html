@@ -26,7 +26,6 @@
                 <!-- End Logo container-->
             </div>
         </header>
-
   <!-- id created for my user action alerts -->
   <p id="message"></p>
 
@@ -131,13 +130,12 @@ Sign In!
     <form id="create-trip" class="border">
       <fieldset>
         <!-- <input type="text" name="trip[user_id]" placeholder="User ID"> -->
-        <input type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
-        <input type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
-        <input type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
-        <input type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
-        <input type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
-          <!-- <input type="text" name="trip[trip_date]" placeholder="YYYY-MM-DD hh:mm:ss"> -->
-        <input type="submit" value="Create a Trip!">
+        <input class="update" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
+        <input class="update" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
+        <input class="update" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
+        <input class="update" type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+        <input class="update" type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+        <input class="update" type="submit" value="Create a Trip!">
       </fieldset>
     </form>
 
@@ -150,12 +148,12 @@ Sign In!
     <form id="update-trip" class="border">
       <fieldset>
         <!-- <input type="text" name="trip[user_id]" placeholder="User ID"> -->
-        <input type="number" min="0" name="trip[id]" placeholder="Trip ID">
-        <input type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
-        <input type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
-        <input type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
-        <input type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
-        <input type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+        <input class="update" type="number" min="0" name="trip[id]" placeholder="Trip ID">
+        <input class="update" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
+        <input class="update" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
+        <input class="update" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
+        <input class="update" type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+        <input class="update" type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
           <!-- <input type="text" name="trip[trip_date]" placeholder="YYYY-MM-DD hh:mm:ss"> -->
         <input type="submit" value="Update Trip">
       </fieldset>
