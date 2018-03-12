@@ -1,14 +1,21 @@
-<table>
+<table style="width:100%" class="table table-striped content">
+<h1>Trips</h1>
+<th align="left"> Trip ID </th>
+<th align="left"> Pickup Location </th>
+<th align="center"> Drop-Off </th>
+<th align="center"> Passengers </th>
+<th align="right"> Trip Start </th>
+<th align="right"> Trip End </th>
 
   {{#each trips as |trip|}}
   <!-- {{> partial}} -->
 
-  <tr>
-    <td> trip: {{trip.item}} </td>
+  <tr style="width:50%">
+
+    <td> trip: {{trip.id}} </td>
 
 <!-- <div> -->
-  <td>  {{trip.id }} <td>
-  <td>   {{trip.pick_up_location}} <td>
+  <td> {{trip.pick_up_location}} <td>
     <td> {{trip.drop_off_location}} </td>
     <td> {{trip.user_id}} </td>
     <td> {{trip.passengers}} </td>
@@ -16,8 +23,9 @@
     <td> {{trip.trip_end}} </td>
 <!-- </div> -->
 
-<td>  <button data-id="{{trip.id}}" id="edit" class="btn btn-default">Edit Trip</button> </td>
-<td>  <button data-id="{{trip.id}}" id="remove" class="btn btn-default">Remove Trip</button> </td>
+<td>  <button data-id="{{trip.id}}" id="delete" class="btn btn-default">Delete Trip</button> </td>
+
+<!-- <td>    <button data-id="{{trip.id}}" type="submit" class="btn btn-default">Submit</button> </td>  -->
 
   </tr>
 {{/each}}

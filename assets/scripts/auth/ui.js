@@ -92,11 +92,11 @@ const createTripFailure = function () {
 const getTripsSuccess = function (data) {
   console.log(data)
   const showTripsHtml = showHandlebars({ trips: data.trips })
-  $('#content').append(showTripsHtml)
+  $('#content').html(showTripsHtml)
   // const elements = data.trips
   // if (elements.length === 0) {
-  //   $('#message').text('You have not created any trips.')
-  //   $('#message').css('background-color', 'red')
+  $('#message').text('Below are your trips')
+  $('#message').css('background-color', 'green')
   // } else {
   // // const showTableHTML = showListTemplate({ trips: data.trips })
   // // $('.trips').attr(showTableHTML)
@@ -113,6 +113,7 @@ const getTripsFailure = function (data) {
 const updateTripSuccess = function (data) {
   $('#message').text('You have sucessfully updated that trip!')
   $('#message').css('background-color', 'green')
+  $('#content').empty()
   $('.update').val('')
   // console.log(events)
   store.trip = data.trip // TODO:come back to this
@@ -124,11 +125,15 @@ const updateTripFailure = function () {
   $('.update').val('')
 }
 
+// const clearTrips = () => {
+//   $('.content').empty()
+// }
+
 const deleteTripSuccess = function (data) {
   $('#message').text('You have succesfully a delete trip')
   $('#message').css('background-color', 'green')
   $('.remove').val('')
-  $('.table').empty()
+  $('.content').empty()
 }
 
 const deleteTripFailure = function () {
@@ -153,4 +158,5 @@ module.exports = {
   updateTripFailure,
   deleteTripSuccess,
   deleteTripFailure
+  // clearTrips
 }
