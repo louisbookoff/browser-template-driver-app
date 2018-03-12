@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://salty-everglades-61557.herokuapp.com/sign-in" \
+curl "http://localhost:4741//sign-in" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

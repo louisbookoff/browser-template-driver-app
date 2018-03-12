@@ -1,0 +1,24 @@
+<table>
+
+  {{#each trips as |trip|}}
+  <!-- {{> partial}} -->
+
+  <tr>
+    <td> trip: {{trip.item}} </td>
+
+<!-- <div> -->
+  <td>  {{trip.id }} <td>
+  <td>   {{trip.pick_up_location}} <td>
+    <td> {{trip.drop_off_location}} </td>
+    <td> {{trip.user_id}} </td>
+    <td> {{trip.passengers}} </td>
+    <td> {{trip.trip_start}} </td>
+    <td> {{trip.trip_end}} </td>
+<!-- </div> -->
+
+<td>  <button data-id="{{trip.id}}" id="edit" class="btn btn-default">Edit Trip</button> </td>
+<td>  <button data-id="{{trip.id}}" id="remove" class="btn btn-default">Remove Trip</button> </td>
+
+  </tr>
+{{/each}}
+</table>
