@@ -90,10 +90,16 @@ const createTripFailure = function () {
 
 const getTripsSuccess = function (data) {
   console.log(data)
+  const elements = data.trips
+  if (elements.length === 0) {
+    $('#message').text('You have not created any trips.')
+    $('#message').css('background-color', 'red')
+  } else {
   // const showTableHTML = showListTemplate({ trips: data.trips })
   // $('.trips').attr(showTableHTML)
-  $('.table').text(JSON.stringify(data.trips, null, 2))
-  $('table').css('color', 'blue')
+    $('.table').text(JSON.stringify(data.trips, null, 2))
+    $('table').css('color', 'blue')
+  }
 }
 
 const getTripsFailure = function (data) {
@@ -117,7 +123,9 @@ const updateTripFailure = function () {
 
 const deleteTripSuccess = function (data) {
   $('#message').text('You have succesfully a delete trip')
-  $('message').css('background-color', 'green')
+  $('#message').css('background-color', 'green')
+  $('.remove').val('')
+  $('.table').empty()
 }
 
 const deleteTripFailure = function () {
