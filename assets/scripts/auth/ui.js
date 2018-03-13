@@ -94,10 +94,14 @@ const getTripsSuccess = function (data) {
   console.log(data)
   const showTripsHtml = showHandlebars({ trips: data.trips })
   $('#content').html(showTripsHtml)
-  // const elements = data.trips
-  // if (elements.length === 0) {
+  const elements = data.trips
+  if (elements.length === 0) {
+    $('#message').text('You have no trips, the table below is empty can\'t you see?')
+    $('#message').css('background-color', 'red')
+    return
+  }
   $('#message').text('Below are your trips. Note: If there are none in the table try creating some.')
-  $('#message').css('color', 'green')
+  $('#message').css('color', 'white')
   // } else {
   // // const showTableHTML = showListTemplate({ trips: data.trips })
   // // $('.trips').attr(showTableHTML)
@@ -108,7 +112,7 @@ const getTripsSuccess = function (data) {
 
 const getTripsFailure = function (data) {
   $('#message').text('You have no trips')
-  $('#message').css('color', 'red')
+  $('#message').css('background-color', 'red')
 }
 
 const updateTripSuccess = function (data) {
@@ -123,6 +127,7 @@ const updateTripSuccess = function (data) {
 const updateTripFailure = function () {
   $('#message').text('Error while updating trip')
   $('#message').css('background-color', 'red')
+  $('.content').empty()
   $('.update').val('')
 }
 
