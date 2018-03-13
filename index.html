@@ -32,8 +32,8 @@
   <div id="pageone">
     <!-- Tagline -->
     <h1 class="tagline">The Trusted Partner For Bus Charter Operators</h1>
-
-
+    <h4 class="tagline"> If you haven't made an account, sign up! Otherwise, sign in to your portal below.</h4>
+    <br>
     <!--Sign Up Button -->
     <div class="wrapper">
       <button type="button" id="pageoneButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
@@ -114,18 +114,18 @@ Sign In!
   <div id="dashboard" class="hidden">
     <h3>Change Password</h3>
     <form id="change-password" class="border">
-  <div class="form-group">
-    <label for="exampleInputpickup1">Old Password</label>
-    <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" id="old-password" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputdropoff1">New Password</label>
-      <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" id="new-password" required>
-  </div>
-  <div class="wrapper">
-  <button type="submit" class="btn btn-primary">Change Password</button>
-</div>
-</form>
+      <div class="form-group">
+        <label for="exampleInputpickup1">Old Password</label>
+        <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" id="old-password" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputdropoff1">New Password</label>
+        <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" id="new-password" required>
+      </div>
+      <div class="wrapper">
+        <button type="submit" class="btn btn-primary">Change Password</button>
+      </div>
+    </form>
 
     <form id="sign-out" class="border">
       <fieldset>
@@ -138,65 +138,65 @@ Sign In!
     <br>
     <br>
 
-<legend>Schedule A Trip</legend>
+    <legend>Schedule A Trip</legend>
     <form id="create-trip">
-  <div class="form-group">
-    <label for="exampleInputpickup1">Pick-up Location</label>
-    <input class="update form-control" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputdropoff1">Drop-off Location</label>
-    <input class="update form-control" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputpassengers1"># of Passengers</label>
-    <input class="update form-control" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputstart1">Start Date</label>
-  <input class="update form-control" type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputend1">End Date</label>
-  <input class="update form-control" type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
-  </div>
-  <button type="submit" class="btn btn-primary">Schedule a trip!</button>
-</form>
+      <div class="form-group">
+        <label for="exampleInputpickup1">Pick-up Location</label>
+        <input class="update form-control" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputdropoff1">Drop-off Location</label>
+        <input class="update form-control" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputpassengers1"># of Passengers</label>
+        <input class="update form-control" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputstart1">Start Date</label>
+        <input class="update form-control" type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputend1">End Date</label>
+        <input class="update form-control" type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Schedule a trip!</button>
+    </form>
 
     <br>
     <br>
     <br>
 
-<!-- Update Trip  -->
+    <!-- Update Trip  -->
 
-<legend>Update Trip</legend>
+    <legend>Update Trip</legend>
     <form id="update-trip">
       <div class="form-group">
         <label for="exampleInputpickup1">Trip ID</label>
         <input class="update form-control" type="number" min="0" name="trip[id]" placeholder="Trip ID" required>
       </div>
-  <div class="form-group">
-    <label for="exampleInputpickup1">Pick-up Location</label>
-    <input class="update form-control" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputdropoff1">Drop-off Location</label>
-    <input class="update form-control" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputpassengers1"># of Passengers</label>
-    <input class="update form-control" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputstart1">Start Date</label>
-  <input class="update form-control" type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputend1">End Date</label>
-  <input class="update form-control" type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
-  </div>
-  <button type="submit" class="btn btn-primary">Update Your Trip!</button>
-</form>
+      <div class="form-group">
+        <label for="exampleInputpickup1">Pick-up Location</label>
+        <input class="update form-control" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputdropoff1">Drop-off Location</label>
+        <input class="update form-control" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputpassengers1"># of Passengers</label>
+        <input class="update form-control" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputstart1">Start Date</label>
+        <input class="update form-control" type="date" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputend1">End Date</label>
+        <input class="update form-control" type="date" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Your Trip!</button>
+    </form>
 
 
     <br>
