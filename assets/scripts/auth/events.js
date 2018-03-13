@@ -73,12 +73,12 @@ const onUpdateTrip = function (event) {
 
 const onDeleteTrip = function (event) {
   event.preventDefault()
-  const data = getFormFields(this)
-  // const id = event.data.trip.id
-  api.deleteTrip(data)
+  // const data = getFormFields(this)
+  const id = event.target.dataset.id
+  api.deleteTrip(id)
     .then(ui.deleteTripSuccess)
     .catch(ui.deleteTripFailure)
-  console.log('data is ', data)
+  // console.log('data is ', data)
 }
 
 const addHandlers = () => {
@@ -90,6 +90,8 @@ const addHandlers = () => {
   $('#update-trip').on('submit', onUpdateTrip)
   $('.trips').on('click', onGetTrips)
   $('#remove-trip').on('submit', onDeleteTrip)
+  // $('#content').on('click', onDeleteTrip) // for my other delete trip form
+  $('#content').on('click', '.delete', onDeleteTrip)
 }
 
 module.exports = {

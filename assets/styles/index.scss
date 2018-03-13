@@ -1,37 +1,66 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'colors';
 
 /*******************************
         NAVBAR
 *******************************/
-#topnav {
-  -webkit-transition: .5s ease;
+.nav {
+  // -webkit-transition: .5s ease;
+  background-color: $ghostwhite;
   border: 0;
-  box-shadow: 0 1px 1px rgba(255, 255, 255, .3);
+  box-shadow: 0 1px 1px $ghostwhite;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 70px;
   min-height: 62px;
   transition: .5s ease;
   z-index: 1030;
 }
 
 
-#topnav .logo {
-  float: left;
-  line-height: 70px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  color: #fff;
-  font-weight: 700;
-  font-size: 24px;
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
 }
 
-.logo {
-  vertical-align: center;
-}
 
 .get {
   margin: auto;
 }
 
+.body {
+  background-color: $ghostwhite;
+  color: $darkgrey;
+}
+
+.tagline {
+  border-color: $alizarincrimsonlight;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+
+
+.btn {
+  align-content: center;
+  background-color: $alizarincrimsonlight;
+  margin: 50;
+  outline-color: $darkgrey;
+  padding: 50;
+  position: relative;
+  top: 50%;
+}
+
+// .btn-primary {
+//   float: left;
+// }
 
 // .offering {
 //   background-image: url('https://i.imgur.com/R5Xk457.png');
