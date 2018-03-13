@@ -54,15 +54,15 @@
             <form class='signup-form'>
               <div>
                 <label for="exampleInputEmail1">Email address</label>
-                <input name="credentials[email]" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                <input name="credentials[email]" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input name="credentials[password]" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input name="credentials[password]" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
               </div>
               <div class="form-group confirmation">
                 <label for="exampleInputPasswordConfirmation">Password Confirmation</label>
-                <input name="credentials[password_confirmation]" type="password" class="form-control" id="exampleInputPasswordConfirmation" placeholder="Password Confirmation">
+                <input name="credentials[password_confirmation]" type="password" class="form-control" id="exampleInputPasswordConfirmation" placeholder="Password Confirmation" required>
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -92,11 +92,11 @@ Sign In!
             <form class='signin-form'>
               <div>
                 <label for="InputEmail">Email address</label>
-                <input name="credentials[email]" type="email" class="form-control" id="InputEmail1" placeholder="Email">
+                <input name="credentials[email]" type="email" class="form-control" id="InputEmail1" placeholder="Email" required>
               </div>
               <div class="form-group">
                 <label for="InputPassword">Password</label>
-                <input name="credentials[password]" type="password" class="form-control" id="InputPassword1" placeholder="Password">
+                <input name="credentials[password]" type="password" class="form-control" id="InputPassword1" placeholder="Password" required>
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -173,7 +173,7 @@ Sign In!
     <form id="update-trip">
       <div class="form-group">
         <label for="exampleInputpickup1">Trip ID</label>
-        <input class="update form-control" type="number" min="0" name="trip[id]" placeholder="Trip ID">
+        <input class="update form-control" type="number" min="0" name="trip[id]" placeholder="Trip ID" required>
       </div>
   <div class="form-group">
     <label for="exampleInputpickup1">Pick-up Location</label>
