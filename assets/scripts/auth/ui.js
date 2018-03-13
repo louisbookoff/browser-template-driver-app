@@ -76,7 +76,7 @@ const signOutFailure = function (error) {
 }
 
 const createTripSuccess = function (data) {
-  $('#message').text('You have sucessfully created a new game!')
+  $('#message').text('You have sucessfully created a trip!')
   $('#message').css('background-color', 'green')
   // console.log(events)
   $('.content').empty()
@@ -96,8 +96,8 @@ const getTripsSuccess = function (data) {
   $('#content').html(showTripsHtml)
   // const elements = data.trips
   // if (elements.length === 0) {
-  $('#message').text('Below are your trips')
-  $('#message').css('background-color', 'green')
+  $('#message').text('Below are your trips. Note: If there are none in the table try creating some.')
+  $('#message').css('color', 'green')
   // } else {
   // // const showTableHTML = showListTemplate({ trips: data.trips })
   // // $('.trips').attr(showTableHTML)
@@ -107,7 +107,7 @@ const getTripsSuccess = function (data) {
 }
 
 const getTripsFailure = function (data) {
-  $('#message').text('Check your internet connection could not retrieve trips')
+  $('#message').text('You have no trips')
   $('#message').css('color', 'red')
 }
 
