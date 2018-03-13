@@ -62,10 +62,28 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   top: 50%;
 }
 
-table {
+.table {
   border: 1px solid $darkgrey;
 }
 
+// .clearfix::after, .footer {
+//   clear: both;
+//   display: block;
+//   font-size: 0;
+//   height: 0;
+//   text-align: right;
+//   visibility: hidden;
+// }
+
+.footer {
+  background-color: $alizarincrimsonlight;
+  bottom: 0;
+  color: $ghostwhite;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
 // .btn-primary {
 //   float: left;
 // }
