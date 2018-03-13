@@ -63,7 +63,6 @@ const onGetTrips = function (event) {
 const onUpdateTrip = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-
   // send data to api method
   api.updateTrip(data)
     .then(ui.updateTripSuccess)

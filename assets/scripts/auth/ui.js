@@ -79,6 +79,7 @@ const createTripSuccess = function (data) {
   $('#message').text('You have sucessfully created a new game!')
   $('#message').css('background-color', 'green')
   // console.log(events)
+  $('.content').empty()
   $('.update').val('')
   store.trip = data.trip // TODO:come back to this
 }
@@ -113,7 +114,7 @@ const getTripsFailure = function (data) {
 const updateTripSuccess = function (data) {
   $('#message').text('You have sucessfully updated that trip!')
   $('#message').css('background-color', 'green')
-  $('#content').empty()
+  $('.content').empty()
   $('.update').val('')
   // console.log(events)
   store.trip = data.trip // TODO:come back to this
