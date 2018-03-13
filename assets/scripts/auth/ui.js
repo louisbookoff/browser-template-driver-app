@@ -66,6 +66,7 @@ const signOutSuccess = function () {
   $('#message').css('background-color', 'green')
   $('#dashboard').toggleClass('hidden')
   $('#pageone').removeClass('hidden')
+  $('.content').empty()
   // console.log('Signed out successfully')
 }
 
