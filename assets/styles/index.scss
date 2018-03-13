@@ -37,7 +37,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 .tagline {
-  border-color: $alizarincrimsonlight;
+  color: $darkgrey;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.taglinetwo {
+  color: $alizarincrimson;
   font-family: sans-serif;
   text-align: center;
 }
