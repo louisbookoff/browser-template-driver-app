@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Busie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+</head>
+
+<body class="container-fluid">
+  <!-- Navigation Bar-->
+  <header id="topnav" class="defaultscroll fixed-top sticky nav">
+    <div class="container">
+      <!-- Logo container-->
+      <div class="logo row text-center">
+        <!-- image logo -->
+        <a href="https://imgur.com/nvcewEb"><img class="busie" alt="logo" src="https://i.imgur.com/nvcewEb.png" title="source: imgur.com" style="height: 100px" /></a>
+      </div>
+      <!-- End Logo container-->
+    </div>
+  </header>
+  <!-- id created for my user action alerts -->
+  <p id="message"></p>
+
+  <div id="pageone">
+    <!-- Tagline -->
+    <h1 class="tagline">The Trusted Partner For Bus Charter Operators</h1>
+    <h4 class="taglinetwo"> If you haven't made an account, sign up! Otherwise, sign in to your portal below.</h4>
+    <br>
+    <!--Sign Up Button -->
+    <div class="wrapper">
+      <button type="button" id="pageoneButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
+ Sign Up!
+ <!-- data target must be the same as id below -->
+</button>
+    </div>
+
+    <!-- Sign up Form Creation-->
+    <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button id="sign-up-button" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+          </div>
+          <div class="modal-body">
+            <form class='signup-form'>
+              <div>
+                <label for="exampleInputEmail1">Email address</label>
+                <input name="credentials[email]" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input name="credentials[password]" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+              </div>
+              <div class="form-group confirmation">
+                <label for="exampleInputPasswordConfirmation">Password Confirmation</label>
+                <input name="credentials[password_confirmation]" type="password" class="form-control" id="exampleInputPasswordConfirmation" placeholder="Password Confirmation" required>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <!-- Button trigger modal SignIn -->
+    <div class="wrapper">
+      <button type="button" id="pageoneButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">
+Sign In!
+<!-- data target must be the same as id below -->
+</button>
+    </div>
+
+    <!-- Modal sign-in -->
+    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Sign In</h4>
+          </div>
+          <div class="modal-body">
+            <form class='signin-form'>
+              <div>
+                <label for="InputEmail">Email address</label>
+                <input name="credentials[email]" type="email" class="form-control" id="InputEmail1" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <label for="InputPassword">Password</label>
+                <input name="credentials[password]" type="password" class="form-control" id="InputPassword1" placeholder="Password" required>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offering">
+    </div>
+
+  </div>
+
+  <!-- Charter Operator Dashboard  -->
+  <div id="dashboard" class="hidden">
+    <h3>User Profile</h3>
+    <form id="change-password" class="border">
+      <div class="form-group">
+        <label for="exampleInputpickup1">Old Password</label>
+        <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" id="old-password" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputdropoff1">New Password</label>
+        <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" id="new-password" required>
+      </div>
+      <div class="wrapper">
+        <button type="submit" class="btn btn-primary">Change Password</button>
+      </div>
+    </form>
+    <br>
+    <form id="sign-out" class="border">
+      <fieldset>
+        <div class="wrapper">
+          <!-- <legend>Sign out!</legend> -->
+          <button type="submit" class="btn btn-primary sign-out">Sign Out!</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <legend>Schedule A Trip</legend>
+    <form id="create-trip">
+      <div class="form-group">
+        <label for="exampleInputpickup1">Pick-up Location</label>
+        <input class="update form-control" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputdropoff1">Drop-off Location</label>
+        <input class="update form-control" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputpassengers1"># of Passengers</label>
+        <input class="update form-control" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputstart1">Start Date</label>
+        <input class="update form-control" type="datetime-local" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputend1">End Date</label>
+        <input class="update form-control" type="datetime-local" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Schedule a trip!</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Update Trip  -->
+
+    <legend>Update Trip</legend>
+    <form id="update-trip">
+      <div class="form-group">
+        <label for="exampleInputpickup1">Trip ID</label>
+        <input class="update form-control" type="number" min="0" name="trip[id]" placeholder="Trip ID" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputpickup1">Pick-up Location</label>
+        <input class="update form-control" type="text" name="trip[pick_up_location]" placeholder="123 Main Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputdropoff1">Drop-off Location</label>
+        <input class="update form-control" type="text" name="trip[drop_off_location]" placeholder="567 State Street" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputpassengers1"># of Passengers</label>
+        <input class="update form-control" type="number" min="0" name="trip[passengers]" placeholder="Number of passengers" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputstart1">Start Date</label>
+        <input class="update form-control" type="datetime-local" name="trip[trip_start]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputend1">End Date</label>
+        <input class="update form-control" type="datetime-local" name="trip[trip_end]" placeholder="YYYY-MM-DD hh:mm:ss" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Your Trip!</button>
+    </form>
+
+
+    <br>
+    <br>
+    <br>
+
+    <div class="wrapper">
+      <button type="button" class="btn btn-primary btn-lg trips">See Trips!</button>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div id="content">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="footer">
+  <footer class="clearfix">
+      <p class="copyright">Copyright 2018</p>
+      <p class="message">Created with &hearts; by <span class="name">Louis Bookoff</span>
+      </p>
+  </footer>
+</div>
+
+</body>
+
+</html>
