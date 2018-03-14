@@ -6,7 +6,7 @@ This application allows operators to sign in and manage simple elements of trip 
 
 To get started with the client please for and clone this repo. From there you can go to config.js and set up a link to a local host or a deployed site and beginning editing or interacting with the application one you go through the proper deploy/set up steps
 
-### Wireframes, User Stories
+### Wireframes & User Stories
 
 * [Wireframes and User Stories](https://imgur.com/a/PpmSF)
 * Above contains early iteration of ERD
@@ -26,6 +26,9 @@ The development process was rather smooth for this application.  Although the ap
 
 This application is deployed to [Busie Trip Manager](https://louisbookoff.github.io/project-two-client-application/) and is hosted by Heroku.
 
+## API Link
+[Busie Trip Manager API](https://github.com/louisbookoff/project-two-api)
+
 ## Built With
 
 * Javascript
@@ -35,7 +38,7 @@ This application is deployed to [Busie Trip Manager](https://louisbookoff.github
 
 ## Contributing
 
-Please message me directly through github if you want to submit pull a pull request. 
+Please message me directly through github if you want to submit pull a pull request.
 
 ## Authors
 
@@ -44,6 +47,6 @@ Please message me directly through github if you want to submit pull a pull requ
 
 ## Acknowledgments
 
-* Hat tip to the awesome instructors for assisting with any issues that arose during this project
-* My co-founders Josh and Brady
-* The world around me, for continuously serving as an inspiration to create and pursue impactful projects
+* Hat tip to the awesome instructors for assisting with any issues that arose during this project.
+* My co-founders Josh and Brady.
+* The world around me, for continuously serving as an inspiration to create and pursue impactful projects.
