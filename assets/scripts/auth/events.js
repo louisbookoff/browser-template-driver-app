@@ -67,7 +67,7 @@ const onUpdateTrip = function (event) {
   api.updateTrip(data)
     .then(ui.updateTripSuccess)
     .catch(ui.updateTripFailure)
-  console.log('data is ', data)
+  // console.log('data is ', data)
 }
 
 const onDeleteTrip = function (event) {

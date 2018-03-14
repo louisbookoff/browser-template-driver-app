@@ -2,6 +2,10 @@
 const store = require('../store')
 const showHandlebars = require('../templates/list.handlebars')
 
+const goTop = function () {
+  $('html, body').animate({ scrollTop: 0 }, 'fast')
+}
+
 const signUpSuccess = function (data) {
   // if ($(.form-group).val() === $(.confirmation).val())
   $('#message').text('Signed up successful!')
@@ -10,6 +14,7 @@ const signUpSuccess = function (data) {
   $('#exampleInputEmail1').val('')
   $('#exampleInputPassword1').val('')
   $('#exampleInputPasswordConfirmation').val('')
+  goTop()
   // console.log(data)
 }
 
@@ -20,6 +25,7 @@ const signUpFailure = function () {
   $('#exampleInputPassword1').val('')
   $('#exampleInputPasswordConfirmation').val('')
   $('.close').click()
+  goTop()
   // console.error(error)
 }
 
@@ -35,14 +41,16 @@ const signInSuccess = function (data) {
   $('.close').click()
   $('#InputEmail1').val('')
   $('#InputPassword1').val('')
+  goTop()
 }
-const signInFailure = function (error) {
+const signInFailure = function () {
   $('#message').text('Error on sign in, try again!')
   $('#message').css('background-color', 'red')
   $('#InputEmail1').val('')
   $('#InputPassword1').val('')
   $('.close').click()
-  console.error(error)
+  // console.error(error)
+  goTop()
 }
 
 const changePasswordSuccess = function () {
@@ -51,6 +59,7 @@ const changePasswordSuccess = function () {
   $('#old-password').val('')
   $('#new-password').val('')
   // console.log('change password successfully')
+  goTop()
 }
 
 const changePasswordFailure = function (error) {
@@ -59,6 +68,7 @@ const changePasswordFailure = function (error) {
   $('#old-password').val('')
   $('#new-password').val('')
   console.error(error)
+  goTop()
 }
 
 const signOutSuccess = function () {
@@ -68,12 +78,14 @@ const signOutSuccess = function () {
   $('#pageone').removeClass('hidden')
   $('.content').empty()
   // console.log('Signed out successfully')
+  goTop()
 }
 
 const signOutFailure = function (error) {
   $('#message').text('Error on sign out')
   $('#message').css('background-color', 'red')
   console.error(error)
+  goTop()
 }
 
 const createTripSuccess = function (data) {
@@ -83,16 +95,18 @@ const createTripSuccess = function (data) {
   $('.content').empty()
   $('.update').val('')
   store.trip = data.trip // TODO:come back to this
+  goTop()
 }
 
 const createTripFailure = function () {
   $('#message').text('Error while creating a trip')
   $('#message').css('background-color', 'red')
   $('.update').val('')
+  goTop()
 }
 
 const getTripsSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   const showTripsHtml = showHandlebars({ trips: data.trips })
   $('#content').html(showTripsHtml)
   const elements = data.trips
@@ -114,6 +128,7 @@ const getTripsSuccess = function (data) {
 const getTripsFailure = function (data) {
   $('#message').text('You have no trips')
   $('#message').css('background-color', 'red')
+  goTop()
 }
 
 const updateTripSuccess = function (data) {
@@ -123,6 +138,7 @@ const updateTripSuccess = function (data) {
   $('.update').val('')
   // console.log(events)
   store.trip = data.trip // TODO:come back to this
+  goTop()
 }
 
 const updateTripFailure = function () {
@@ -130,6 +146,7 @@ const updateTripFailure = function () {
   $('#message').css('background-color', 'red')
   $('.content').empty()
   $('.update').val('')
+  goTop()
 }
 
 // const clearTrips = () => {
@@ -141,11 +158,13 @@ const deleteTripSuccess = function (data) {
   $('#message').css('background-color', 'green')
   $('.remove').val('')
   $('.content').empty()
+  goTop()
 }
 
 const deleteTripFailure = function () {
   $('#message').text('Deleting trip failed')
   $('message').css('background-color', 'red')
+  goTop()
 }
 
 module.exports = {
